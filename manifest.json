@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "returnToTwitter",
+    "version": "1.0",
+
+    "description": "Replaces X.com's dumb logo with twitters original.",
+
+    "icons": {
+        "48": "./xTwitterLogoMashup.svg"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.twitter.com/*"],
+            "js": ["returnLogo.js"]
+        },
+        {
+            "matches": ["*://*.X.com/*"],
+            "js": ["returnLogo.js"]
+        },
+        {
+            "matches": ["*://*.x.com/*"],
+            "js": ["returnlogo.js"]
+        }
+    ]
+}
+
